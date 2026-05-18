@@ -17,8 +17,8 @@ import aiohttp, aiosqlite ,os, asyncio
 #===================================================================
 router = Router()
 subscribers = set()
-BASE_DIR = r"C:\Users\Dan\.vscode\FirstApp"
-DB_NAME = os.path.join(BASE_DIR, "my_app.db")
+
+DB_NAME = "myapp.sql"
 
 async def notifier(bot :Bot):
     while True:
@@ -98,8 +98,8 @@ async def help(message : Message):
     await message.answer(
         "Comands:\n/start - start bot(form)\n/help - comands list\n/about - information about bot \n"
         "/cancel - cancel form\n/mydata - show your data\n/file - get interesting file" 
-        "\n /productNum - choose product id\n/product [id] - get information about product with this id\n"
-        "/reg [age] - register in DB with your age\n/users - get all users from DB"
+        "\n/productNum - choose product id\n/product [id] - get information about product with this id\n"
+        "/reg [age] - register in DB with your age\n/users - get all users from DB\n"
         "/subscribe - subscribe to notifications\n/unsubscribe - unsubscribe from notifications\n/subs - subscribers list", 
 
         parse_mode="Markdown",
